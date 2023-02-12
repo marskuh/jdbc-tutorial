@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="intellij:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/intellij_jar</output-path>
+    <root id="root">
+      <element id="archive" name="intellij.jar">
+        <element id="module-output" name="intellij" />
+      </element>
+      <element id="library" level="project" name="libs" />
+    </root>
+  </artifact>
+</component>

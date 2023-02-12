@@ -11,6 +11,8 @@ import java.sql.SQLException;
 public class DataSourceExample {
 
     public static void main(String[] args) throws SQLException {
+        System.out.println("This is the %s".formatted(DataSourceExample.class.getSimpleName()));
+
         final var dataSource = new MysqlDataSource();
         dataSource.setUrl("jdbc:mysql://localhost:3306/test");
         dataSource.setUser("MYSQL_USER");

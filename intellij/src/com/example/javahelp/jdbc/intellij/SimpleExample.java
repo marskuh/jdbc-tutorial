@@ -15,6 +15,8 @@ import java.sql.*;
  */
 public class SimpleExample {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException {
+        System.out.println("This is the %s".formatted(SimpleExample.class.getSimpleName()));
+
         // This is here to ensure your classpath is set up correctly.
         // If this is not red, you are good to go
         // This is not required for "production usage"

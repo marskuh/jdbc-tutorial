@@ -38,3 +38,25 @@ The examples using a `DataSource` are the way to go and will help migrating an a
 ## Postgres, Oracle, etc.
 
 If you want to use a different database, you simply have to drop the according JDBC drivers to the <a href="./libs">libs</a> directory and use a different JDBC connection string.
+
+## Run the Application
+
+This project is set up as follows:
+
+- IntelliJ will build an artifact `intellij.jar`, which contains all the classes and resources from this project
+- IntelliJ will copy all dependencies from `lib` directory to the artifacts directory (`out/artifacts/intellij_jar`)
+- IntelliJ created a `META-INF/MANIFEST.MF` file, containing all information necessary to start the application
+- The default Main class is `SimpleExample`.
+
+In order to run the application, please invoke `Build -> Build Artifacts ... intellij:jar --> Build or Rebuild`.
+
+This will perform the above mentioned steps.
+
+Afterwards, the application can be started as follows:
+
+`java -jar out/artifacts/intellij_jar/intellij.jar`
+
+If you want to start `DataSourceExample` instead, you can do so by:
+
+`java -cp out/artifacts/intellij_jar/intellij.jar:out/artifacts/intellij_jar/mysql-connector-j-8.0.32.jar com.example.javahelp.jdbc.intellij.DataSourceExample`
+
