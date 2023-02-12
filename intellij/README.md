@@ -9,6 +9,9 @@ It requires a JDK 18 and a mysql database running on default settings:
 - User: MYSQL_USER
 - Password: MYSQL_PASSWORD
 
+Please note, when loading this project into IntelliJ some path's may not work (especially the JDK/SDK) bits.
+You need to manually configure it.
+
 ## JDBC Connection String
 
 The JDBC connection string is used by the `javax.sql.DataSource` or the `javax.sql.DriverManager` to determine which JDBC driver to use
