@@ -39,16 +39,19 @@ The examples using a `DataSource` are the way to go and will help migrating an a
 
 If you want to use a different database, you simply have to drop the according JDBC drivers to the <a href="./libs">libs</a> directory and use a different JDBC connection string.
 
-## Run the Application
+## Run build the Application
 
-This project is set up as follows:
+The application can be run from IntelliJ by simply starting the classes, containing the `public static void main(...) methods`.
+Just hit the "play" button.
 
-- IntelliJ will build an artifact `intellij.jar`, which contains all the classes and resources from this project
-- IntelliJ will copy all dependencies from `lib` directory to the artifacts directory (`out/artifacts/intellij_jar`)
+However, in order to run the application outside the IDE, you have to understand the project setup:
+
+- IntelliJ builds an artifact `intellij.jar`, which contains all the classes and resources from this project
+- IntelliJ copies all dependencies from `lib` directory to the artifacts directory (`out/artifacts/intellij_jar`)
 - IntelliJ created a `META-INF/MANIFEST.MF` file, containing all information necessary to start the application
 - The default Main class is `SimpleExample`.
 
-In order to run the application, please invoke `Build -> Build Artifacts ... intellij:jar --> Build or Rebuild`.
+In order to "build" the application, please invoke `Build -> Build Artifacts ... intellij:jar --> Build or Rebuild`.
 
 This will perform the above mentioned steps.
 
@@ -60,3 +63,4 @@ If you want to start `DataSourceExample` instead, you can do so by:
 
 `java -cp out/artifacts/intellij_jar/intellij.jar:out/artifacts/intellij_jar/mysql-connector-j-8.0.32.jar com.example.javahelp.jdbc.intellij.DataSourceExample`
 
+For learning, this may be a first step, but in general it is recommended to use MAVEN or GRADLE for this instead.
